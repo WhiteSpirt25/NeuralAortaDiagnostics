@@ -1,0 +1,16 @@
+# jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# python
+__pycache__
+
+# random stuff i tested but not used
+mulitresunet-pytorch
+multiresunet.py
+SementicAnnotator2.py
+experimentImagePrep.ipynb
