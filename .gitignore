@@ -9,8 +9,17 @@ ipython_config.py
 # python
 __pycache__
 
+# Foreign models
+/TransUnetCode/TransUnet
+/TransUnetCode/TransUnet_old.py
+/TransUnetCode/TransUnet_testing.py
+
+# Colab stuff
+auto_colab.py
+
 # random stuff i tested but not used
-mulitresunet-pytorch
-multiresunet.py
-SementicAnnotator2.py
-experimentImagePrep.ipynb
+PyTorchAorta_colab.ipynb
+PyTorchAorta.ipynb
+
+/testing_scripts
+dataset.py
