@@ -24,24 +24,24 @@ Output folder shall have following structure, without the validation folder:
 
 ```
 folder
-│───images
-│   | [nii.gz filename]_1.jpg
+└───images
+│   │ [nii.gz filename]_1.jpg
 │   │ [nii.gz filename]_2.jpg
-|   | ...
-│   masks
-│   | [nii.gz filename]_1.pickle
-│   │ [nii.gz filename]_2.pickle
-|   | ...
+│   │ ...
+└───masks
+│   │   [nii.gz filename]_1.pickle
+│   │   [nii.gz filename]_2.pickle
+│   │   ...
 │
 └───validation
-│   │───images
-│   |   | [nii.gz filename]_1.jpg
-│   │   | [nii.gz filename]_2.jpg
-|   |   | ...
-│   │   masks
-|   │   | [nii.gz filename]_1.pickle
-|   │   │ [nii.gz filename]_2.pickle
-|   |   | ...
+    └───images
+    │   │   [nii.gz filename]_1.jpg
+    │   │   [nii.gz filename]_2.jpg
+    │   │   ...
+    └───masks
+        │   [nii.gz filename]_1.pickle
+        │   [nii.gz filename]_2.pickle
+        │   ...
 ```
 
 Validation dataset can be created using code in same notebook. Code selects files with names from list and  moves to designated directory.

@@ -37,4 +37,4 @@ pyvenv.cfg
 pip-selfcheck.json
 
 share
-TransUnetCode\combined_models.py
+/TransUnetCode/combined_models.py
