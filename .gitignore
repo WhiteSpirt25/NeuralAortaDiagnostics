@@ -10,9 +10,7 @@ ipython_config.py
 __pycache__
 
 # Foreign models
-/TransUnetCode/TransUnet
-/TransUnetCode/TransUnet_old.py
-/TransUnetCode/TransUnet_testing.py
+models/TransUnet
 
 # Colab stuff
 auto_colab.py

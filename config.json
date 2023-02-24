@@ -1,0 +1,44 @@
+{
+  "MAIN": {
+    "DATASET_DIR": "placeholder",
+    "NUMBER_OF_CLASSES": 3,
+    "SAVE_MODEL": false,
+    "SEED": 42,
+    "DEVICE": "cpu"
+  },
+  "MODELS": {
+    "DeepLabv3P": {
+      "PRETRAINED_MODEL_PATH": "placeholder",
+      "SAVE_NAME": "DeepLabV3Plus",
+      "SAVE_DIR": "placeholder",
+      "IMAGE_SIZE": 256,
+      "MAX_EPOCHS": 30,
+      "BATCH_SIZE": 8,
+      "BASE_LR": 0.001,
+      "EARLY_STOPPING": false,
+      "PATIENCE": 5
+    },
+    "RN50-Unet": {
+      "PRETRAINED_MODEL_PATH": "placeholder",
+      "SAVE_NAME": "RN50-Unet",
+      "SAVE_DIR": "placeholder",
+      "IMAGE_SIZE": 256,
+      "MAX_EPOCHS": 30,
+      "BATCH_SIZE": 8,
+      "BASE_LR": 0.001,
+      "EARLY_STOPPING": false,
+      "PATIENCE": 5
+    },
+    "TransUnet": {
+      "PRETRAINED_MODEL_PATH": "placeholder",
+      "SAVE_NAME": "TransUnet",
+      "SAVE_DIR": "placeholder",
+      "IMAGE_SIZE": 224,
+      "MAX_EPOCHS": 30,
+      "BATCH_SIZE": 8,
+      "BASE_LR": 0.001,
+      "EARLY_STOPPING": false,
+      "PATIENCE": 5
+    }
+  }
+}

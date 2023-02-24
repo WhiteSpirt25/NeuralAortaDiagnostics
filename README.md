@@ -1,21 +1,24 @@
 # ML models for aorta diagnostics
 
 This is masters thesis containing different experiments and models code.
+Written as testing pipeline with easily changable seettings and models.
 
-ImagePreparations - contains code for preparing dataset from CT files  
-MeasuringAortaDiameter - contains code (with examples) of measuring sizes of aorta
+[ImagePreparations](ImagePreparations.ipynb) - contains code for preparing dataset from CT files  
+[MeasuringAortaDiameter](MeasuringAortaDiameter.ipynb) - contains code (with examples) of measuring sizes of aorta
 
-learning_scripts - contains learning files for machine learning models  
-TransUnetCode - folder for code using TransUnet model REQUIRES CLONE OF TransUnet repo inside
+models - contains model sprecific functions to be used in pipeline. This includes models itself and treir preprocessing functions.  
+[config.json](config.json) - configuration file containing model, training and modes saving parameters.
+
+[model_testing](model_testing.py) - main file with training and testing pipeline.
 
 ## Usage
 
-### 1. Download Google pre-trained ViT models (required only for TransUnet)
+### 1. (required only for TransUnet) Download Google pre-trained ViT models
 * [Get models in this link](https://console.cloud.google.com/storage/vit_models/): R50-ViT-B_16, ViT-B_16, ViT-L_16...
 
 ### 2. Environment
 
-Please prepare an environment with python=3.8, and then use the command "pip install -r requirements.txt" for the dependencies.
+Please prepare an environment with python=3.9, and then use the command "pip install -r requirements.txt" for the dependencies.
 
 ### 3. Prepare data
 
@@ -48,8 +51,11 @@ Validation dataset can be created using code in same notebook. Code selects file
 
 ### 4. Train
 
-- Run the train script on dataset. The batch size can be reduced to 12 or 6 to save memory (please also decrease the base_lr linearly), and both can reach similar performance.
+- (required only for TransUnet) Clone [TransUnet repo](https://github.com/Beckschen/TransUNet) in models folder.
+
+- Check [config.json](config.json) and adjust settings as needed.
+- Run training-testing script.
 
 ```bash
-python .\TransUnet.py --dataset_dir [dataset path] --pretrained_path [Vit path] --vit_name [vit name]
+python model_testing.py --model_name TransUnet
 ```
